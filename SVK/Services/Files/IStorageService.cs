@@ -11,6 +11,6 @@ namespace Services.Files
     public interface IStorageService
     {
         Uri BasePath { get; }
-        Uri GenerateImageUploadSas(Image image);
+        Uri GenerateImageUploadSas(Domain.Files.File image);
     }
 }

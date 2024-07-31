@@ -18,18 +18,18 @@ namespace Services.Files
             connectionString = configuration.GetConnectionString("Storage");
         }
 
-        public Uri GenerateImageUploadSas(Image image)
+        public Uri GenerateImageUploadSas(Domain.Files.File file)
         {
             string containerName = "images";
             var blobServiceClient = new BlobServiceClient(connectionString);
             var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
-            BlobClient blobClient = containerClient.GetBlobClient(image.Filename);
+            BlobClient blobClient = containerClient.GetBlobClient(file.Filename);
 
             var blobSasBuilder = new BlobSasBuilder
             {
                 ExpiresOn = DateTime.UtcNow.AddMinutes(5),
                 BlobContainerName = containerName,
-                BlobName = image.Filename,
+                BlobName = file.Filename,
             };
 
             blobSasBuilder.SetPermissions(BlobSasPermissions.Create | BlobSasPermissions.Write);

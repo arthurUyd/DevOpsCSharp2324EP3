@@ -1,14 +1,26 @@
-﻿using System;
+﻿using Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ardalis.GuardClauses;
 
 namespace Domain.Producten
 {
-    public class Product
+    public class Product : Entity
     {
-        public Guid Id { get; set; }
-        public string ProductNaam { get; set; }
+        private string productnaam = default!;
+        public string ProductNaam
+        {
+            get => productnaam;
+            set => productnaam = Guard.Against.NullOrWhiteSpace(value, nameof(ProductNaam));
+        }
+
+        private Product() { }
+        public Product(string productNaam)
+        {
+            ProductNaam = productNaam;
+        }
     }
 }
