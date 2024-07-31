@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VkjlQw1q3IXLYQNF5fEsJ9FztMD1aw08s63Dyr8j8TW++8YCyoZAIyxsf1j09VVCR0IK1zyLhAwhSTW/4UpLPw==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arthu\\.nuget\\packages\\ardalis.guardclauses\\4.6.0\\ardalis.guardclauses.4.6.0.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\mimetypesmap\\1.0.8\\mimetypesmap.1.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
