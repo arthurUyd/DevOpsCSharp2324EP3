@@ -1,26 +1,68 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Persistence;
+using Domain.Gebruikers;
 using Shared.Gebruikers;
 namespace Services.Gebruikers;
 
 public class GebruikerService : IGebruikerService
 {
-    private readonly ApplicationDBContext _context;
-    public Task<GebruikerResult.Create> CreateAsync(GebruikerDto.Mutate model)
+    private readonly ApplicationDBContext dbContext;
+
+    public GebruikerService(ApplicationDBContext dbContext)
     {
-        throw new NotImplementedException();
+        this.dbContext = dbContext;
     }
 
-    public Task<GebruikerDto.Index> GetGebruikerByIdAsync(Guid id)
+    public async Task<int> CreateAsync(GebruikerDto.Mutate model)
     {
-        throw new NotImplementedException();
+        Gebruiker g = new(model.Naam!); 
+        dbContext.Gebruikers.Add(g);
+        await dbContext.SaveChangesAsync();
+        return g.Id;    
     }
 
-    public Task<GebruikerDto.Index[]> GetIndexAsync()
+    public async Task<GebruikerDto.Detail> GetDetailAsync(int id)
     {
-        throw new NotImplementedException();
+        GebruikerDto.Detail? gebruiker = await dbContext.Gebruikers.Select(x => new GebruikerDto.Detail
+        {
+            Id = x.Id,
+            Naam = x.Naam,
+            CreatedAt = x.CreatedAt,
+            UpdatedAt = x.UpdatedAt,
+        }).SingleOrDefaultAsync(x => x.Id == id);
+
+        if(gebruiker is null  ) 
+            throw new EntityNotFoundException(nameof(gebruiker), id);
+        return gebruiker;
+    }
+
+    public async Task<GebruikerResult.Index> GetIndexAsync(GebruikerRequest.Index request)
+    {
+       var query = dbContext.Gebruikers.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(request.Searchterm))
+        {
+            query = query.Where(x => x.Naam.Contains(request.Searchterm, StringComparison.OrdinalIgnoreCase));
+        }
+
+        int totalAmount = await query.CountAsync();
+
+        var items = await query
+           .Skip((request.Page - 1) * request.PageSize)
+           .Take(request.PageSize)
+           .OrderBy(x => x.Id)
+           .Select(x => new GebruikerDto.Index
+           {
+               Id = x.Id,
+               Naam = x.Naam,
+           }).ToListAsync();
+
+        var result = new GebruikerResult.Index
+        {
+            Gebruikers = items,
+            TotalAmount = totalAmount
+        };
+
+        return result;
     }
 }

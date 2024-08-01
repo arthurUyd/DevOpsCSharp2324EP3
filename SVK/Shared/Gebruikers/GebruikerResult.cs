@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Shared.Gebruikers;
 
-public class GebruikerResult
+public abstract class GebruikerResult
 {
-    public class Create
+    public class Index
     {
-        public Guid Id { get; set; }
+        public IEnumerable<GebruikerDto.Index>? Gebruikers { get; set; }
+        public int TotalAmount { get; set; }
     }
+
+   
 }

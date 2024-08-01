@@ -1,7 +1,7 @@
 ﻿using System.Net.Http.Json;
-using BogusStore.Shared.Infrastructure;
+using Shared.Infrastructure;
 
-namespace BogusStore.Client.Infrastructure;
+namespace Client.Infrastructure;
 
 public class CleanErrorHandler : DelegatingHandler
 {

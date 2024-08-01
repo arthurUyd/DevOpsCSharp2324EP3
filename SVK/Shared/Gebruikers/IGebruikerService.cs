@@ -8,7 +8,7 @@ namespace Shared.Gebruikers;
 
 public interface IGebruikerService
 {
-    Task<GebruikerDto.Index[]> GetIndexAsync();
-    Task<GebruikerResult.Create> CreateAsync(GebruikerDto.Mutate model);
-    Task<GebruikerDto.Index> GetGebruikerByIdAsync(Guid id);
+    Task<GebruikerResult.Index> GetIndexAsync(GebruikerRequest.Index request);
+    Task<GebruikerDto.Detail> GetDetailAsync(int id);
+    Task<int> CreateAsync(GebruikerDto.Mutate model);
 }

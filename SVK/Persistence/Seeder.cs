@@ -16,6 +16,9 @@ public class Seeder
 
     public void Seed()
     {
+        dbContext.Database.EnsureDeleted();
+        dbContext.Database.EnsureCreated();
+
         SeedProducts();
         SeedGebruikers();
         SeedTransportOpdrachten();

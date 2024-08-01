@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RVk4CjNvo1HU1sN1QfkcpKaatJAXy6u1/7vzB3v13SUkpcr4E36nFgtDOurs5Pc692gl+19wx7OoAgv2I0xMxg==",
+  "dgSpecHash": "z5/3K3pwVVP59uXuOSiuAzpTdJ13okmG7vvH8M8SlA4zYho6F1Nft40lRW33h6bogT1NVRXnkWlSqL4VnHt91A==",
   "success": true,
   "projectFilePath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,6 @@
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.7\\microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.7\\microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.7\\microsoft.entityframeworkcore.analyzers.8.0.7.nupkg.sha512",
-    "C:\\Users\\arthu\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.7\\microsoft.entityframeworkcore.inmemory.8.0.7.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.7\\microsoft.entityframeworkcore.relational.8.0.7.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.7\\microsoft.entityframeworkcore.sqlserver.8.0.7.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",

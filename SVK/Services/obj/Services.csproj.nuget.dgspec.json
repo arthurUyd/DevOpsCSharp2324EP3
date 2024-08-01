@@ -111,17 +111,13 @@
           "dependencies": {
             "Bogus": {
               "target": "Package",
-              "version": "[34.0.2, )"
+              "version": "[35.6.0, )"
             },
             "EntityFrameworkCore.Triggered": {
               "target": "Package",
               "version": "[3.2.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[8.0.7, )"
             },
@@ -203,6 +199,14 @@
             "Azure.Storage.Blobs": {
               "target": "Package",
               "version": "[12.21.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [

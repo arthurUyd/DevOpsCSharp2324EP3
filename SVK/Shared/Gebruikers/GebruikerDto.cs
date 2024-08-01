@@ -6,14 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Shared.Gebruikers;
 
-public class GebruikerDto
+public abstract class GebruikerDto
 {
     public class Index
     {
-        public Guid Id { get; set; }
-        public string Naam { get; set; }
+        public int Id { get; set; }
+        public string? Naam { get; set; }
     }
 
+    public class Detail
+    {
+        public int Id { get; set; }
+        public string? Naam { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+    }
     public class Mutate
     {
         public string? Naam { get; set; }

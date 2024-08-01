@@ -13,12 +13,13 @@ public class ApplicationDBContext: DbContext
     public DbSet<TransportOpdracht> TransportOpdrachten  => Set<TransportOpdracht>();
     public DbSet<Gebruiker> Gebruikers => Set<Gebruiker>();
 
+    public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options) { }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
         optionsBuilder.EnableDetailedErrors();
         optionsBuilder.EnableSensitiveDataLogging();
-        optionsBuilder.UseInMemoryDatabase(databaseName: "svk");
         optionsBuilder.UseTriggers(options =>
         {
             options.AddTrigger<EntityBeforeSaveTrigger>();

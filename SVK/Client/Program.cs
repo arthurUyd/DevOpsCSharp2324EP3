@@ -1,7 +1,4 @@
 using Client.Components;
-using Blazorise;
-using Blazorise.Bootstrap;
-using Blazorise.Icons.FontAwesome;
 
 
 var builder = WebApplication.CreateBuilder(args);

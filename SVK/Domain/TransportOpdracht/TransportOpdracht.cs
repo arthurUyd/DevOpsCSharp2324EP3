@@ -57,6 +57,8 @@ public class TransportOpdracht : Entity
     private readonly List<Product> products = new();    
     public IReadOnlyCollection<Product> Producten  => products.AsReadOnly();
 
+   
+
     private TransportOpdracht() { }
     public TransportOpdracht(DateTime datum, int routenummer, IEnumerable<int> lbn, Gebruiker lader, string foto, IEnumerable<string> bestanden, string transporteur, string nummerplaat, IEnumerable<Product> producten)
     {
@@ -84,4 +86,35 @@ public class TransportOpdracht : Entity
         }
     }
 
+    public TransportOpdracht(DateTime datum1, int routenummer1, Gebruiker lader, string fotourl, string transporteur, string nummerplaat)
+    {
+        Datum = datum1;
+        Routenummer = routenummer1;
+        Lader = lader;
+        FotoUrl = fotourl;
+        Transporteur = transporteur;
+        Nummerplaat = nummerplaat;
+    }
+
+    public void Product(Product p)
+    {
+        Guard.Against.Null(p, nameof(p));
+        products.Add(p);
+    }
+
+    public void VoegBestandUrlToe(string s)
+    {
+        Guard.Against.NullOrWhiteSpace(s, nameof(s));
+        if(bestandenurls.Contains(s))
+            throw new ApplicationException($"{s} is al toegevoegd aan deze transport opdracht. ");
+        bestandenurls.Add(s);
+
+    }
+    public void VoegFotoUrlToe(int s)
+    {
+        Guard.Against.Null(s, nameof(s));
+        if (laadbonnummers.Contains(s))
+            throw new ApplicationException($"{s} is al toegevoegd aan deze transport opdracht. ");
+        laadbonnummers.Add(s);
+    }
 }
