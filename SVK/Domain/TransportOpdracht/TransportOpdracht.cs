@@ -20,16 +20,20 @@ public class TransportOpdracht : Entity
         get => datum;
         set => datum = Guard.Against.Null(value, nameof(Datum));
     }
-    private string routenummer = default!;
-    public string Routenummer
+    private int routenummer = default!;
+    public int Routenummer
     {
         get => routenummer;
-        set => routenummer = Guard.Against.NullOrWhiteSpace(value, nameof(Routenummer));
+        set
+        {
+            routenummer = Guard.Against.NegativeOrZero(value, nameof(Routenummer));
+            routenummer = Guard.Against.Null(value, nameof(Routenummer));
+        }
     }
 
-    private readonly List<string> laadbonnummers = new();
-    public IReadOnlyCollection<string> Laadbonnummers => laadbonnummers.AsReadOnly();
-    public Gebruiker Lader { get; set; }
+    private readonly List<int> laadbonnummers = new();
+    public IReadOnlyCollection<int> Laadbonnummers => laadbonnummers.AsReadOnly();
+    public Gebruiker Lader { get; } = default!;
     private string fotourl = default!;
     public string FotoUrl
     {
@@ -54,19 +58,19 @@ public class TransportOpdracht : Entity
     public IReadOnlyCollection<Product> Producten  => products.AsReadOnly();
 
     private TransportOpdracht() { }
-    public TransportOpdracht(DateTime datum, string routenummer, IEnumerable<string> lbn, Gebruiker lader, string foto, IEnumerable<string> bestanden, string transporteur, string nummerplaat, IEnumerable<Product> producten)
+    public TransportOpdracht(DateTime datum, int routenummer, IEnumerable<int> lbn, Gebruiker lader, string foto, IEnumerable<string> bestanden, string transporteur, string nummerplaat, IEnumerable<Product> producten)
     {
         Datum = datum;
         Routenummer = routenummer;
         Guard.Against.NullOrEmpty(lbn, nameof(lbn));
         Guard.Against.NullOrEmpty(bestanden, nameof(bestanden));
         Guard.Against.NullOrEmpty(producten, nameof(producten));
-        Lader = lader;
+        Lader = Guard.Against.Null(lader, nameof(Lader));
         FotoUrl = foto;
         Transporteur = transporteur;
         Nummerplaat = nummerplaat;
 
-        foreach (string i in lbn)
+        foreach (int i in lbn)
         {
             laadbonnummers.Add(i);
         }
