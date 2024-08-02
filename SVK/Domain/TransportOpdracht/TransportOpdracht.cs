@@ -33,7 +33,12 @@ public class TransportOpdracht : Entity
 
     private readonly List<int> laadbonnummers = new();
     public IReadOnlyCollection<int> Laadbonnummers => laadbonnummers.AsReadOnly();
-    public Gebruiker Lader { get; } = default!;
+    private Gebruiker lader = default!;
+    public Gebruiker Lader
+    {
+        get => lader;
+        set => lader = Guard.Against.Null(value, nameof(Lader));
+    }
     private string fotourl = default!;
     public string FotoUrl
     {
@@ -54,10 +59,10 @@ public class TransportOpdracht : Entity
         get => nummerplaat;
         set => nummerplaat = Guard.Against.NullOrWhiteSpace(value, nameof(Nummerplaat));
     }
-    private readonly List<Product> products = new();    
-    public IReadOnlyCollection<Product> Producten  => products.AsReadOnly();
+    private readonly List<Product> products = new();
+    public IReadOnlyCollection<Product> Producten => products.AsReadOnly();
 
-   
+
 
     private TransportOpdracht() { }
     public TransportOpdracht(DateTime datum, int routenummer, IEnumerable<int> lbn, Gebruiker lader, string foto, IEnumerable<string> bestanden, string transporteur, string nummerplaat, IEnumerable<Product> producten)
@@ -67,7 +72,7 @@ public class TransportOpdracht : Entity
         Guard.Against.NullOrEmpty(lbn, nameof(lbn));
         Guard.Against.NullOrEmpty(bestanden, nameof(bestanden));
         Guard.Against.NullOrEmpty(producten, nameof(producten));
-        Lader = Guard.Against.Null(lader, nameof(Lader));
+        Lader = lader;
         FotoUrl = foto;
         Transporteur = transporteur;
         Nummerplaat = nummerplaat;
@@ -76,11 +81,11 @@ public class TransportOpdracht : Entity
         {
             laadbonnummers.Add(i);
         }
-        foreach(string i in bestanden)
+        foreach (string i in bestanden)
         {
-           bestandenurls.Add(i);
+            bestandenurls.Add(i);
         }
-        foreach(Product p in producten)
+        foreach (Product p in producten)
         {
             products.Add(p);
         }
@@ -105,7 +110,7 @@ public class TransportOpdracht : Entity
     public void VoegBestandUrlToe(string s)
     {
         Guard.Against.NullOrWhiteSpace(s, nameof(s));
-        if(bestandenurls.Contains(s))
+        if (bestandenurls.Contains(s))
             throw new ApplicationException($"{s} is al toegevoegd aan deze transport opdracht. ");
         bestandenurls.Add(s);
 

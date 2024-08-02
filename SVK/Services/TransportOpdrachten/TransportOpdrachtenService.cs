@@ -112,4 +112,23 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
         };
         return result;
     }
+
+    public async Task EditAsync(int transportOpdrachtId, TransportOpdrachtDto.Mutate model)
+    {
+        TransportOpdracht? opdracht = await dBContext.TransportOpdrachten.SingleOrDefaultAsync(x => x.Id == transportOpdrachtId);
+
+        if (opdracht is null)
+            throw new EntityNotFoundException(nameof(TransportOpdracht), transportOpdrachtId);
+       
+        Gebruiker lader = new(model.Lader!);
+        opdracht.Datum = model.Datum!.Value;
+        opdracht.Routenummer = model.Routenummer!.Value;
+        opdracht.Lader = lader;
+        opdracht.Transporteur = model.Transporteur!;
+        opdracht.Nummerplaat = model.Nummerplaat!;
+
+        await dBContext.SaveChangesAsync();
+        
+
+    }
 }
