@@ -17,10 +17,6 @@
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\Client\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
-    },
-    {
       "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\Client\\wwwroot\\img\\015_svk_logo_met_slogan_black-01.jpg",
       "PackagePath": "staticwebassets\\img\\015_svk_logo_met_slogan_black-01.jpg"
     },

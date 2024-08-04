@@ -28,9 +28,6 @@ D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\obj\Deb
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\obj\Debug\net8.0\Client.pdb
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\obj\Debug\net8.0\Client.genruntimeconfig.cache
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\obj\Debug\net8.0\ref\Client.dll
-D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Blazorise.dll
-D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Blazorise.Bootstrap.dll
-D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Blazorise.Licensing.dll
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
@@ -42,6 +39,11 @@ D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Deb
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Microsoft.JSInterop.dll
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\obj\Debug\net8.0\Client.csproj.AssemblyReference.cache
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\obj\Debug\net8.0\Client.csproj.CopyComplete
-D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Blazorise.Components.dll
-D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Blazorise.Icons.FontAwesome.dll
-D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Blazorise.Snackbar.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Blazored.FluentValidation.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\FluentValidation.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Shared.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\bin\Debug\net8.0\Shared.pdb

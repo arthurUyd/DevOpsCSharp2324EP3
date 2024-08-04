@@ -17,7 +17,7 @@ public class ProductController : ControllerBase
 
     [SwaggerOperation("Haalt alle producten op.")]
     [HttpGet]
-    public async Task<ProductResult.Index> GetIndex(ProductRequest.Index request)
+    public async Task<ProductResult.Index> GetIndex([FromQuery] ProductRequest.Index request)
     {
         return await productService.GetIndexAsync(request);
     }
@@ -33,7 +33,7 @@ public class ProductController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create(ProductDto.Mutate model)
     {
-        var productId = productService.CreateAsync(model);  
+        var productId = await productService.CreateAsync(model);  
         return CreatedAtAction(nameof(Create), productId);
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Domain.Gebruikers;
-using Domain.TransportOpdracht;
+using Domain.TransportOpdrachten;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 using Services.Files;
@@ -37,7 +37,7 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
 
         TransportOpdracht t = new(model.Datum!.Value, model.Routenummer!.Value, g,image.FileUri.ToString(), model.Transporteur!, model.Nummerplaat!);
 
-         dBContext.TransportOpdrachten.Add(t); 
+        dBContext.TransportOpdrachten.Add(t); 
         await dBContext.SaveChangesAsync();
 
         Uri uploadSas = storageService.GenerateImageUploadSas(image);
@@ -58,7 +58,7 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
             Id  = x.Id, 
             Datum = x.Datum,
             Routenummer = x.Routenummer,
-            Laadbonnummers = x.Laadbonnummers,  
+            Laadbonnen = x.Laadbonnen.Select(x => x.Nummer),  
             Lader = new GebruikerDto.Index
             {
                 Naam = x.Lader.Naam
@@ -93,13 +93,13 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
                Id = x.Id,
                Datum = x.Datum,
                Routenummer = x.Routenummer,
-               Laadbonnummers = x.Laadbonnummers,
+               Laadbonnen = x.Laadbonnen.Select(x => x.Nummer),
                Lader = new GebruikerDto.Index
                {
                    Naam = x.Lader.Naam
                },
                Fotourl = x.FotoUrl,
-               BestandenUrls = x.BestandenUrls,
+               BestandenUrls = x.BestandenUrls.ToList(),
                Transporteur = x.Transporteur,
                Nummerplaat = x.Nummerplaat,
                Producten = x.Producten.Select(x => x.ProductNaam),

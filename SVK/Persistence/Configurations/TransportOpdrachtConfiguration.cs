@@ -1,4 +1,4 @@
-﻿using Domain.TransportOpdracht;
+﻿using Domain.TransportOpdrachten;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -15,7 +15,8 @@ internal class TransportOpdrachtConfiguration : EntityConfiguration<TransportOpd
     {
         base.Configure(builder);
 
-        builder.OwnsOne(x => x.Lader).Property(x => x.Naam);
-        builder.OwnsMany(x => x.Producten).Property(x => x.Id);
+        builder.HasOne(x => x.Lader);
+        builder.HasMany(x => x.Producten);
+        builder.HasMany(x => x.Laadbonnen);
     }
 }

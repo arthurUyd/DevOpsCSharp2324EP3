@@ -16,7 +16,7 @@ public abstract class TransportOpdrachtDto
         public int Id { get; set; }
         public DateTime? Datum { get; set; }
         public int? Routenummer { get; set; }
-        public IEnumerable<int>? Laadbonnummers { get; set; }
+        public IEnumerable<int>? Laadbonnen{ get; set; }
         public GebruikerDto.Index? Lader { get; set; }
         public string? Fotourl { get; set; }
         public IEnumerable<string>? BestandenUrls { get; set; }
@@ -30,7 +30,7 @@ public abstract class TransportOpdrachtDto
         public int Id { get; set; }
         public DateTime? Datum { get; set; }
         public int? Routenummer { get; set; }
-        public IEnumerable<int>? Laadbonnummers { get; set; }
+        public IEnumerable<int>? Laadbonnen { get; set; }
         public GebruikerDto.Index? Lader { get; set; }
         public string? Fotourl { get; set; }
         public IEnumerable<string>? BestandenUrls { get; set; }

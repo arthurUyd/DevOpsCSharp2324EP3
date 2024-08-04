@@ -17,7 +17,7 @@ public class TransportOpdrachtController : ControllerBase
 
     [SwaggerOperation("Haalt alle transportOpdrachten op.")]
     [HttpGet]
-    public async Task<TransportOpdrachtResult.Index> GetIndex(TransportOpdrachtRequest.Index request)
+    public async Task<TransportOpdrachtResult.Index> GetIndex([FromQuery] TransportOpdrachtRequest.Index request)
     {
         return await service.GetIndexAsync(request);
     }

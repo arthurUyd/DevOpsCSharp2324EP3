@@ -26,7 +26,11 @@ builder.Services.AddSwaggerGen(options =>
     options.EnableAnnotations();
 }).AddFluentValidationRulesToSwagger();
 
-builder.Services.AddDbContext<ApplicationDBContext>();
+builder.Services.AddDbContext<ApplicationDBContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+    
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -61,7 +65,7 @@ app.MapFallbackToFile("index.html");
 using (var scope = app.Services.CreateScope())
 { // Require a DbContext from the service provider and seed the database.
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDBContext>();
-
+    Seeder seeder = new(dbContext);
     //{TODO} Seeding fixen. 
     seeder.Seed();
 }
