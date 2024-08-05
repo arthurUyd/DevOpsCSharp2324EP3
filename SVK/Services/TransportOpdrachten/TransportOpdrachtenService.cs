@@ -5,14 +5,8 @@ using Persistence;
 using Services.Files;
 using Domain.Files;
 using Shared.Gebruikers;
-using Shared.Producten;
 using Shared.TransportOpdrachten;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using File = Domain.Files.File;
+
 
 namespace Services.TransportOpdrachten;
 
@@ -32,12 +26,12 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
         if (await dBContext.TransportOpdrachten.AnyAsync(x => x.Routenummer == model.Routenummer))
             throw new EntityAlreadyExistsException(nameof(TransportOpdracht), nameof(TransportOpdracht.Routenummer), model.Routenummer.ToString());
         Gebruiker g = new(model.Lader!);
-        File image = new File(storageService.BasePath, model.ImageContentType!);
+        Image image = new Image(storageService.BasePath, model.ImageContentType!);
 
 
-        TransportOpdracht t = new(model.Datum!.Value, model.Routenummer!.Value, g,image.FileUri.ToString(), model.Transporteur!, model.Nummerplaat!);
+        TransportOpdracht t = new(model.Datum!.Value, model.Routenummer!.Value, g, image.FileUri.ToString(), model.Transporteur!, model.Nummerplaat!);
 
-        dBContext.TransportOpdrachten.Add(t); 
+        dBContext.TransportOpdrachten.Add(t);
         await dBContext.SaveChangesAsync();
 
         Uri uploadSas = storageService.GenerateImageUploadSas(image);
@@ -55,19 +49,25 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
     {
         TransportOpdrachtDto.Detail? t = await dBContext.TransportOpdrachten.Select(x => new TransportOpdrachtDto.Detail
         {
-            Id  = x.Id, 
+            Id = x.Id,
             Datum = x.Datum,
             Routenummer = x.Routenummer,
-            Laadbonnen = x.Laadbonnen.Select(x => x.Nummer),  
+            Laadbonnen = x.Laadbonnen.Select(x => x.Nummer),
             Lader = new GebruikerDto.Index
             {
                 Naam = x.Lader.Naam
             },
             Fotourl = x.FotoUrl,
-            BestandenUrls = x.BestandenUrls,
+            Bestanden = x.Bestanden.Select(x => new DocumentDto.Index 
+            { 
+                Name = x.Name,
+                ContentType = x.ContentType, 
+                Size = x.Size, 
+                Content = x.Content 
+            }),
             Transporteur = x.Transporteur,
             Nummerplaat = x.Nummerplaat,
-            Producten = x.Producten.Select(x => x.ProductNaam), 
+            Producten = x.Producten.Select(x => x.ProductNaam),
             CreatedAt = x.CreatedAt,
             UpdatedAt = x.UpdatedAt
         }).SingleOrDefaultAsync(x => x.Id == id);
@@ -99,7 +99,13 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
                    Naam = x.Lader.Naam
                },
                Fotourl = x.FotoUrl,
-               BestandenUrls = x.BestandenUrls.ToList(),
+               Bestanden = x.Bestanden.Select(x => new DocumentDto.Index
+               {
+                   Name = x.Name,
+                   ContentType = x.ContentType,
+                   Size = x.Size,
+                   Content = x.Content
+               }),
                Transporteur = x.Transporteur,
                Nummerplaat = x.Nummerplaat,
                Producten = x.Producten.Select(x => x.ProductNaam),
@@ -119,7 +125,7 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
 
         if (opdracht is null)
             throw new EntityNotFoundException(nameof(TransportOpdracht), transportOpdrachtId);
-       
+
         Gebruiker lader = new(model.Lader!);
         opdracht.Datum = model.Datum!.Value;
         opdracht.Routenummer = model.Routenummer!.Value;
@@ -128,7 +134,7 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
         opdracht.Nummerplaat = model.Nummerplaat!;
 
         await dBContext.SaveChangesAsync();
-        
+
 
     }
 }

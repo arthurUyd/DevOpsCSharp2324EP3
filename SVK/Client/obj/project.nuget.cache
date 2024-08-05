@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TilCMTxNaP6lPJv5SoP1QtnFJ8xOwM0Ia9OGLJhQb7usDzIxheiD+800dvWc0ghQG5Xfmr+26+y++V2XJzwCaQ==",
+  "dgSpecHash": "ApPXq6BcJx00fa+obgV/Mwivt/DD0A1LFtzErNmxVLtzwWQI90iiJhSk915eab0bIvW2Lt5skUlY3LuvLSJOUw==",
   "success": true,
   "projectFilePath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\Client\\Client.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.components.web\\8.0.7\\microsoft.aspnetcore.components.web.8.0.7.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.7\\microsoft.aspnetcore.components.webassembly.8.0.7.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\8.0.7\\microsoft.aspnetcore.components.webassembly.devserver.8.0.7.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.1.0\\microsoft.aspnetcore.http.features.2.1.0.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.7\\microsoft.aspnetcore.metadata.8.0.7.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

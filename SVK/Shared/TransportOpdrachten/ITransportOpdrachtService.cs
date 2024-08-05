@@ -12,5 +12,4 @@ public interface ITransportOpdrachtService
     Task<TransportOpdrachtResult.Index> GetIndexAsync(TransportOpdrachtRequest.Index request);
     Task<TransportOpdrachtResult.Create> CreateAsync(TransportOpdrachtDto.Mutate model);
     Task EditAsync(int transportOpdrachtId, TransportOpdrachtDto.Mutate model);
-
 }

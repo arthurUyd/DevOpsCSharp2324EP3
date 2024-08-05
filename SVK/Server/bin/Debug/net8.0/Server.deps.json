@@ -1727,7 +1727,8 @@
       },
       "Shared/1.0.0": {
         "dependencies": {
-          "FluentValidation": "11.9.2"
+          "FluentValidation": "11.9.2",
+          "Microsoft.AspNetCore.Http.Features": "2.1.0"
         },
         "runtime": {
           "Shared.dll": {}

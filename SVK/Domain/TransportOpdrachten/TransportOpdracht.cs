@@ -9,6 +9,7 @@ using Domain.Common;
 using Ardalis.GuardClauses;
 using System.Collections.ObjectModel;
 using Domain.Laadbonnen;
+using Domain.Files;
 
 namespace Domain.TransportOpdrachten;
 
@@ -47,8 +48,8 @@ public class TransportOpdracht : Entity
         set => fotourl = Guard.Against.NullOrWhiteSpace(value, nameof(FotoUrl));
     }
     //bestanden bekijken met de fotos
-    private readonly List<string> bestandenurls = new();
-    public IReadOnlyCollection<string> BestandenUrls => bestandenurls.AsReadOnly();
+    private readonly List<Document> bestanden = new();
+    public IReadOnlyCollection<Document> Bestanden => bestanden.AsReadOnly();
     private string transporteur = default!;
     public string Transporteur
     {
@@ -67,7 +68,7 @@ public class TransportOpdracht : Entity
 
 
     private TransportOpdracht() { }
-    public TransportOpdracht(DateTime datum, int routenummer, Gebruiker lader, string foto, string transporteur, string nummerplaat, IEnumerable<Product> producten, IEnumerable<string> bestanden, IEnumerable<Laadbon> laadbonnenlijst)
+    public TransportOpdracht(DateTime datum, int routenummer, Gebruiker lader, string foto, string transporteur, string nummerplaat, IEnumerable<Product> producten, IEnumerable<Document> bestandenlijst, IEnumerable<Laadbon> laadbonnenlijst)
     {
         Datum = datum;
         Routenummer = routenummer;
@@ -83,9 +84,9 @@ public class TransportOpdracht : Entity
         {
             laadbonnen.Add(laadbon);
         }
-        foreach (string s in bestanden)
+        foreach (Document s in bestandenlijst)
         {
-            bestandenurls.Add(s);
+            bestanden.Add(s);
         }
 
         foreach (Product p in producten)
@@ -104,14 +105,14 @@ public class TransportOpdracht : Entity
         Nummerplaat = nummerplaat;
     }
 
-    public void VoegBestandUrlToe(IEnumerable<string> s)
+    public void VoegBestandUrlToe(IEnumerable<Document> s)
     {
         Guard.Against.NullOrEmpty(s, nameof(s));
-        foreach (string t in s)
+        foreach (Document t in s)
         {
-            if (bestandenurls.Contains(t))
+            if (bestanden.Contains(t))
                 throw new ApplicationException($"{t} is al toegevoegd aan deze transport opdracht. ");
-            bestandenurls.Add(t);
+            bestanden.Add(t);
         }
     }
     

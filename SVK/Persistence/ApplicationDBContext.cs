@@ -7,6 +7,8 @@ using Domain.TransportOpdrachten;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Triggers;
 using System.Reflection;
+using System.Reflection.Metadata;
+using Document = Domain.Files.Document;
 
 public class ApplicationDBContext: DbContext
 {
@@ -14,6 +16,7 @@ public class ApplicationDBContext: DbContext
     public DbSet<TransportOpdracht> TransportOpdrachten  => Set<TransportOpdracht>();
     public DbSet<Gebruiker> Gebruikers => Set<Gebruiker>();
     public DbSet<Laadbon> Laadbonnen => Set<Laadbon>();
+    public DbSet<Document> Documenten => Set<Document>();
     public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options) { }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

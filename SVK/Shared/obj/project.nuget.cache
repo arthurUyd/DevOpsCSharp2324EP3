@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "4rrIgYA5iiMneM9CymV3Q5k4aScX67kp4pB68oOE0wOqf6e4ncMj2aXpeAwPvkM5YgaLlKD9gBjOHShorx0Gew==",
+  "dgSpecHash": "YW/06V460grQYZ1h5I94Te3l/he56RPzg+TwYQoj5rkREgCyWceLJWTPAPUjcgtyFF/tzSYL57ZrEjY2QhIakg==",
   "success": true,
   "projectFilePath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\Shared\\Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\arthu\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512"
+    "C:\\Users\\arthu\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.1.0\\microsoft.aspnetcore.http.features.2.1.0.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\microsoft.extensions.primitives\\2.1.0\\microsoft.extensions.primitives.2.1.0.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

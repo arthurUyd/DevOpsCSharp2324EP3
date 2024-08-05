@@ -19,7 +19,7 @@ public abstract class TransportOpdrachtDto
         public IEnumerable<int>? Laadbonnen{ get; set; }
         public GebruikerDto.Index? Lader { get; set; }
         public string? Fotourl { get; set; }
-        public IEnumerable<string>? BestandenUrls { get; set; }
+        public IEnumerable<DocumentDto.Index>? Bestanden { get; set; }
         public string? Transporteur { get; set; }
         public string? Nummerplaat { get; set; }
         public IEnumerable<string>? Producten {  get; set; }
@@ -33,7 +33,7 @@ public abstract class TransportOpdrachtDto
         public IEnumerable<int>? Laadbonnen { get; set; }
         public GebruikerDto.Index? Lader { get; set; }
         public string? Fotourl { get; set; }
-        public IEnumerable<string>? BestandenUrls { get; set; }
+        public IEnumerable<DocumentDto.Index>? Bestanden { get; set; }
         public string? Transporteur { get; set; }
         public string? Nummerplaat { get; set; }
         public IEnumerable<string>? Producten { get; set; }

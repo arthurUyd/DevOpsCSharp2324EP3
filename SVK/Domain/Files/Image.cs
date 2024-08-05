@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Files
 {
-    public class File: ValueObject
+    public class Image: ValueObject
     {
         public Uri BasePath { get; }
         public Guid Identifier { get; }
@@ -18,7 +18,7 @@ namespace Domain.Files
         public string Filename => $"{Identifier}.{Extension}";
         public Uri FileUri => new Uri($"{BasePath}/{Filename}");
 
-        public File(Uri basePath, string contentType)
+        public Image(Uri basePath, string contentType)
         {
             Identifier = Guid.NewGuid();
             Extension = MimeTypesMap.GetExtension(contentType).ToLower();

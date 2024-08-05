@@ -18,7 +18,7 @@ namespace Services.Files
             connectionString = configuration.GetConnectionString("Storage");
         }
 
-        public Uri GenerateImageUploadSas(Domain.Files.File file)
+        public Uri GenerateImageUploadSas(Domain.Files.Image file)
         {
             string containerName = "images";
             var blobServiceClient = new BlobServiceClient(connectionString);
