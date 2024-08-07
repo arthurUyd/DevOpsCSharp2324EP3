@@ -7,9 +7,21 @@ using Server.Middleware;
 using Services;
 using Persistence;
 using Shared.Producten;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyCorsPolicy",
+ builder =>
+ {
+     builder.WithOrigins("https://localhost:7066")
+            // Replace with your client's domain
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+ });
+});
 
 builder.Services.AddServices();
 // Fluentvalidation
@@ -29,7 +41,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-    
+
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
@@ -45,6 +57,11 @@ if (app.Environment.IsDevelopment())
     app.UseWebAssemblyDebugging();
 
 }
+else
+{
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
 
 app.UseHttpsRedirection();
 
@@ -54,7 +71,7 @@ app.UseStaticFiles();
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseCors("MyCorsPolicy");
 
 app.MapRazorPages();
 
@@ -64,8 +81,6 @@ app.MapFallbackToFile("index.html");
 using (var scope = app.Services.CreateScope())
 { // Require a DbContext from the service provider and seed the database.
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDBContext>();
-    Seeder seeder = new(dbContext);
-    //{TODO} Seeding fixen. 
-    seeder.Seed();
+
 }
 app.Run();

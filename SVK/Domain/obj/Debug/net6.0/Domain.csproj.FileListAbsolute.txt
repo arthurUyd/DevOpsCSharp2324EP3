@@ -1,0 +1,13 @@
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\bin\Debug\net6.0\Domain.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\bin\Debug\net6.0\Domain.pdb
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\Domain.sourcelink.json
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\Domain.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\Domain.pdb
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Domain\obj\Debug\net6.0\ref\Domain.dll

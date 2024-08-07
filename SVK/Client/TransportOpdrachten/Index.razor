@@ -1,0 +1,33 @@
+﻿@page "/transportopdrachten"
+
+<div class="container">
+    <h1 class="title">Transport Opdrachten:</h1>
+    @if(opdrachten is null)
+    {
+        <p>Loading...</p>
+    }else{
+        <div class="columns">
+            <div class="column">
+                @if (!opdrachten.Any())
+                {
+                    <div class="notification">
+                        Geen opdrachten gevonden voor deze zoekcriteria
+                    </div>
+                }
+                else
+                {
+                  <div class="columns is-multiline">
+
+                    @foreach (var opdracht in opdrachten)
+                    {
+                        <div class="column is-half">
+                            <ListItem Opdracht= "opdracht"/>
+                        </div>
+                    }
+                </div>  
+                }
+            </div>
+        </div>
+    }
+
+</div>

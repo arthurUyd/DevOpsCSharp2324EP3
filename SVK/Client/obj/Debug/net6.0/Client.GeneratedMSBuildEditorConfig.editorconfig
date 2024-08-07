@@ -1,0 +1,63 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Client
+build_property.RootNamespace = Client
+build_property.ProjectDir = D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = SW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/TransportOpdrachten/Components/ListItem.razor]
+build_metadata.AdditionalFiles.TargetPath = VHJhbnNwb3J0T3BkcmFjaHRlblxDb21wb25lbnRzXExpc3RJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/TransportOpdrachten/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = VHJhbnNwb3J0T3BkcmFjaHRlblxJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/TransportOpdrachten/_imports.razor]
+build_metadata.AdditionalFiles.TargetPath = VHJhbnNwb3J0T3BkcmFjaHRlblxfaW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/Gebruikers/Gebruikers.razor]
+build_metadata.AdditionalFiles.TargetPath = R2VicnVpa2Vyc1xHZWJydWlrZXJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-az7jj6olmj
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ocnk4r8tjs
+
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/Client/Shared/MenuComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1lbnVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7rev1y2tet

@@ -1,0 +1,26 @@
+﻿@page "/gebruikers"
+
+<section class="section">
+    <h1 class="title">Gebruikers:</h1>
+    <div class="grid">
+        @if (gebruikers is not null)
+        {
+            @foreach (var gebruiker in gebruikers)
+            {
+                    <div class="cell">
+                       @gebruiker.Naam
+                    </div>
+            }
+        } 
+        else
+        {
+            <div class="block">
+                Geen gebruikers om te tonen...
+            </div>
+        }
+    </div>
+</section>
+
+
+
+
