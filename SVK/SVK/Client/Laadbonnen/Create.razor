@@ -1,0 +1,87 @@
+﻿@page "/transportopdracht/laadbon/{transportopdrachtId:int}"
+<PageTitle>Laadbon Toevoegen</PageTitle>
+
+
+<EditForm Model="@laadbon" OnValidSubmit="@CreateLaadbonAsync">
+    <FluentValidationValidator />
+    
+    <label class="label">Laadbon</label>
+    <div class="field">
+        <label class="label">Laadbon Nummer</label>
+        <div class="control">
+            <InputNumber class="input" @bind-Value="laadbon.Nummer" />
+            <ValidationMessage For="() => laadbon.Nummer" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Lader</label>
+        <div class="control">
+            <InputText class="input" @bind-Value="laadbon.Transporteur" />
+            <ValidationMessage For="() => laadbon.Transporteur" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Selecteer Producten</label>
+        @foreach (var product in producten)
+        {
+            <div class="control">
+                <label class="checkbox">
+                    <input type="checkbox" @onchange="(e) => ToggleProductSelection(e, product)" /> @product.ProductNaam
+                </label>
+            </div>
+        }
+        <ValidationMessage For="() => laadbon.Producten" />
+    </div>
+
+    
+
+    <hr />
+
+    <label class="label">Address</label>
+    <div class="field">
+        <label class="label">Straat</label>
+        <div class="control">
+            <InputText class="input" @bind-Value="laadbon.Address.Addressline1" />
+            <ValidationMessage For="() => laadbon.Address.Addressline1" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Bus</label>
+        <div class="control">
+            <InputText class="input" @bind-Value="laadbon.Address.Addressline2" />
+            <ValidationMessage For="() => laadbon.Address.Addressline2" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Postcode</label>
+        <div class="control">
+            <InputText class="input" @bind-Value="laadbon.Address.PostalCode" />
+            <ValidationMessage For="() => laadbon.Address.PostalCode" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Stad</label>
+        <div class="control">
+            <InputText class="input" @bind-Value="laadbon.Address.City" />
+            <ValidationMessage For="() => laadbon.Address.City" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Land</label>
+        <div class="control">
+            <InputText class="input" @bind-Value="laadbon.Address.Country" />
+            <ValidationMessage For="() => laadbon.Address.Country" />
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="button is-link is-fullwidth" type="submit">Toevoegen</button>
+        <a href="transportopdracht/@transportOpdrachtId" class="button is-link is-light is-fullwidth">Annuleren</a>
+    </div>
+</EditForm>

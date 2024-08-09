@@ -1,0 +1,286 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\SVK.Services\\SVK.Services.csproj": {}
+  },
+  "projects": {
+    "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj",
+        "projectName": "SVK.Domain",
+        "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj",
+        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "MimeTypesMap": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Persistence\\SVK.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Persistence\\SVK.Persistence.csproj",
+        "projectName": "SVK.Persistence",
+        "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Persistence\\SVK.Persistence.csproj",
+        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj": {
+                "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[35.6.0, )"
+            },
+            "EntityFrameworkCore.Triggered": {
+              "target": "Package",
+              "version": "[3.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Shared\\SVK.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Shared\\SVK.Shared.csproj",
+        "projectName": "SVK.Shared",
+        "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Shared\\SVK.Shared.csproj",
+        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\SVK.Services\\SVK.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\SVK.Services\\SVK.Services.csproj",
+        "projectName": "SVK.Services",
+        "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\SVK.Services\\SVK.Services.csproj",
+        "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\SVK.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj": {
+                "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj"
+              },
+              "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Persistence\\SVK.Persistence.csproj": {
+                "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Persistence\\SVK.Persistence.csproj"
+              },
+              "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Shared\\SVK.Shared.csproj": {
+                "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Shared\\SVK.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.21.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

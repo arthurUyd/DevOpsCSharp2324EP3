@@ -1,0 +1,15 @@
+﻿
+
+<AuthorizeView>
+    <Authorized>
+        <button class="button is-ghost">@context.User.Identity.Name</button>
+        <button class="button is-light" @onclick="BeginSignOut">
+            <strong>Uitloggen</strong>
+        </button>
+    </Authorized>
+    <NotAuthorized>
+        <a class="button is-primary" href="authentication/login">
+            <strong>Inloggen</strong>
+        </a>
+    </NotAuthorized>
+</AuthorizeView>

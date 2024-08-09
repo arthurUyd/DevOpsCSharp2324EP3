@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EpM0moobPAe4YNMWS0qe5YF+kJ2GRREIVvv9RBVCqC6iWBDNgtDpmGPQQugnA4mrMSUbRLIz8g89wSlskemaTw==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Shared\\SVK.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arthu\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

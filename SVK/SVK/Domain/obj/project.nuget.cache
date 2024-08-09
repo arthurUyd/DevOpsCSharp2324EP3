@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q8AWLYWnOYMa4nFYTPJlyub1VJd9kWzEt4GplMqYMOck0jXveynNdMmq6+O0wpPkMd2ICD2b7r+YNDIhKDoDnA==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arthu\\.nuget\\packages\\ardalis.guardclauses\\3.3.0\\ardalis.guardclauses.3.3.0.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\jetbrains.annotations\\2021.2.0\\jetbrains.annotations.2021.2.0.nupkg.sha512",
+    "C:\\Users\\arthu\\.nuget\\packages\\mimetypesmap\\1.0.8\\mimetypesmap.1.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

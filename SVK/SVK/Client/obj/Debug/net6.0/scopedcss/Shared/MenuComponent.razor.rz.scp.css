@@ -1,0 +1,26 @@
+.navbar[b-6q1yhpum5m]{
+    height: 10vh;
+
+}
+
+img[b-6q1yhpum5m]{
+    height: 100%; 
+    
+}
+
+.navbar-item:hover[b-6q1yhpum5m] {
+    background-color: #D32F2F;
+    color: white; 
+  
+}
+.loginbuttons[b-6q1yhpum5m]{
+    padding: 8px 12px 8px 12px
+}
+.custom-hover:hover[b-6q1yhpum5m] {
+    background-color: #2d2d2d; /* A lighter shade of black */
+    color: white; /* Ensure text color stays visible */
+}
+
+.logo:hover[b-6q1yhpum5m]{
+    background-color:white;
+}

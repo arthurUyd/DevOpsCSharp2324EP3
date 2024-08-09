@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\obj\\Debug\\net6.0\\compressed\\8bp3sb1yp9.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\SVK.Client.styles.css",
+      "PackagePath": "staticwebassets\\SVK.Client.styles.css"
+    },
+    {
+      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\wwwroot\\img\\logoslogan.jpg",
+      "PackagePath": "staticwebassets\\img\\logoslogan.jpg"
+    },
+    {
+      "Id": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.SVK.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.SVK.Client.props",
+      "PackagePath": "build\\SVK.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.SVK.Client.props",
+      "PackagePath": "buildMultiTargeting\\SVK.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.SVK.Client.props",
+      "PackagePath": "buildTransitive\\SVK.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

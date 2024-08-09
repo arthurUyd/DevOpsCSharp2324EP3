@@ -1,0 +1,16 @@
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.csproj.AssemblyReference.cache
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.AssemblyInfoInputs.cache
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.AssemblyInfo.cs
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.csproj.CoreCompileInputs.cache
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.sourcelink.json
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\bin\Debug\net6.0\SVK.Persistence.deps.json
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\bin\Debug\net6.0\SVK.Persistence.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\bin\Debug\net6.0\SVK.Persistence.pdb
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\bin\Debug\net6.0\SVK.Domain.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\bin\Debug\net6.0\SVK.Domain.pdb
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.csproj.CopyComplete
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\refint\SVK.Persistence.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.pdb
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\ref\SVK.Persistence.dll
