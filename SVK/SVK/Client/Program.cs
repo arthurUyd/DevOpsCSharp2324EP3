@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using SVK.Shared.Gebruikers;
 using SVK.Shared.TransportOpdrachten;
+using SVK.Shared.Laadbonnen;
+using SVK.Client.Laadbonnen;
+using SVK.Shared.Producten;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -20,12 +23,12 @@ builder.Services.AddTransient<CleanErrorHandler>();
 builder.Services.AddHttpClient("SvkServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
            .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>()
            .AddHttpMessageHandler<CleanErrorHandler>();
+builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("SvkServerAPI")); 
+builder.Services.AddHttpClient<PublicClient>(client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
 
 builder.Services.AddHttpClient<IStorageService,
                                AzureBlobStorageService>();
-builder.Services.AddHttpClient<PublicClient>(client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
 
-builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("SvkServerAPI"));
 
 builder.Services.AddOidcAuthentication(options =>
 {
@@ -37,5 +40,7 @@ builder.Services.AddOidcAuthentication(options =>
 
 builder.Services.AddScoped<IGebruikerService, GebruikerService>();
 builder.Services.AddScoped<ITransportOpdrachtService, TransportOpdrachtService>();
+builder.Services.AddScoped<ILaadbonService, LaadbonService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 await builder.Build().RunAsync();

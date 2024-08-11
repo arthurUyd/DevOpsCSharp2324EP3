@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5w7x3BFDmz4w2gUtvvOkfXy3vn0emRyo2+7ps4BMM10=",
+  "Hash": "aJQqVavG4p1Wwt/oJ9H+7psNKp+P5TACJ1jrU8le+dQ=",
   "Source": "SVK.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7995,6 +7995,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\wwwroot\\js\\site.js",
+      "SourceId": "SVK.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
     }
   ]
 }

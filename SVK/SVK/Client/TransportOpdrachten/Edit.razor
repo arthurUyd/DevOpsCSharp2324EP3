@@ -1,0 +1,44 @@
+﻿@page "/transportopdracht/edit/{Id:int}"
+@attribute [Authorize(Roles = Roles.Lader)]
+<PageTitle>@opdracht.Routenummer Aanpassen</PageTitle>
+
+<EditForm Model="@opdracht" OnValidSubmit="@EditOpdrachtAsync">
+    <FluentValidationValidator/>
+
+    <div class="field">
+        <label class="label">Routenummer</label>
+        <div class="control">
+            <InputNumber class="input" @bind-Value="opdracht.Routenummer" />
+            <ValidationMessage For="() => opdracht.Routenummer" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Lader</label>
+        <div class="control">
+            <InputText class="input" @bind-Value="opdracht.Lader" />
+            <ValidationMessage For="() => opdracht.Lader" />
+        </div>
+    </div>
+    
+    <div class="field">
+        <label class="label">Nummerplaat</label>
+        <div class="control">
+            <InputText class="input" @bind-Value="opdracht.Nummerplaat" />
+            <ValidationMessage For="() => opdracht.Nummerplaat" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Datum</label>
+        <div class="control">
+            <InputDate class="input" @bind-Value="opdracht.Datum" />
+            <ValidationMessage For="() => opdracht.Datum" />
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="button is-primary is-fullwidth" type="submit">Aanpassen</button>
+        <a href="transportopdracht/@Id" class="button is-link is-light is-fullwidth">Annuleren</a>
+    </div>
+</EditForm>

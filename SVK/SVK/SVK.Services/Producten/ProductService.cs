@@ -21,22 +21,7 @@ public class ProductService : IProductService
         this.dbContext = dbContext;
     }
 
-    public async Task<int> CreateAsync(ProductDto.Mutate model)
-    {
-        if (await dbContext.Producten.AnyAsync(x => x.ProductNaam == model.ProductNaam))
-            throw new EntityAlreadyExistsException(nameof(Product), nameof(Product.ProductNaam), model.ProductNaam);
-
-        Product product = new Product()
-        {
-            ProductNaam = model.ProductNaam!
-        };
-
-        dbContext.Producten.Add(product);
-        await dbContext.SaveChangesAsync();
-
-        return product.Id;
-    }
-
+/*
     public async Task<ProductDto.Detail> GetDetailAsync(int productId)
     {
         ProductDto.Detail? product = await dbContext.Producten.Select(x => new ProductDto.Detail
@@ -51,7 +36,7 @@ public class ProductService : IProductService
             throw new EntityNotFoundException(nameof(Product), productId);
 
         return product;
-    }
+    }*/
 
     public async Task<ProductResult.Index> GetIndexAsync(ProductRequest.Index request)
     {

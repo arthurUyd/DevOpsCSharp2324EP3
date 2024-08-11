@@ -51,7 +51,6 @@ public abstract class TransportOpdrachtDto
             public Validator() { 
                 RuleFor(x => x.Routenummer).NotEmpty();
                 RuleFor(x => x.Lader).NotEmpty();
-                RuleFor(x => x.ImageContentType).NotEmpty();
                 RuleFor(x => x.Nummerplaat).NotEmpty();
             }
         }

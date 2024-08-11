@@ -1,59 +1,80 @@
 ﻿@page "/transportopdracht/{Id:int}"
-<PageTitle>@opdracht?.Routenummer</PageTitle>
+@attribute [Authorize(Roles = Roles.Lader)]
 
-@if(opdracht is null)
+<PageTitle>@opdracht?.Routenummer</PageTitle>
+    @if (opdracht is null)
 {
     <p>Loading...</p>
+}
+else
+{
+    <section class="section">
+        <h1 class="title">Transport Opdracht Details</h1>
 
-}else{
-<section class="section">
-    <h1 class="title">Transport Opdracht Details</h1>
-
-    <div class="columns">
-        <div class="column is-half">
-            <div class="box">
-                <h2 class="title is-4">Opdracht Details</h2>
-                <p>
-                    <strong>Datum:</strong><time datetime="@opdracht!.Datum?.ToString("yyyy-MM-ddTHH:mm:ss")">@FormattedOpdrachtDate</time>
-                </p>
-                <p><strong>Routenummer:</strong> @opdracht.Routenummer</p>
-                <p><strong>Lader:</strong> @opdracht.Lader!.Naam</p>
-                @if (opdracht.Laadbonnen is not null)
-                {
-                    <p><strong>Transporteur:</strong> @opdracht.Laadbonnen.First().Transporteur</p>
-                }
-                <p><strong>Nummerplaat:</strong> @opdracht.Nummerplaat</p>
-                <figure class="image is-4by3">
-                    <img src="@opdracht.Fotourl" alt="Foto van de opdracht">
-                </figure>
-            </div>
-        </div>
-        @if (opdracht.Laadbonnen is not null)
-        {
+        <div class="columns">
             <div class="column is-half">
                 <div class="box">
-                    <h2 class="title is-4">Laadbonnen</h2>
-                    <ul>
-                        @foreach (var laadbon in opdracht.Laadbonnen)
-                        {
-                            <li> <a href="@laadbon.Url">@laadbon.Nummer</a></li>
-                        }
-                    </ul>
-                </div>
-                <div class="box">
-                    <h2 class="title is-4">Producten</h2>
-                    <ul>
-                        @foreach (var l in opdracht!.Laadbonnen!)
-                        {
-                            @foreach (var p in l.Producten!)
-                            {
-                               <li>@p.ProductNaam</li>
-                            }
-                        }
-                    </ul>
+                    <h2 class="title is-4">Opdracht Details</h2>
+                    <p>
+                        <strong>Datum:</strong>
+                        <time datetime="@opdracht!.Datum?.ToString("yyyy-MM-ddTHH:mm:ss")">@FormattedOpdrachtDate</time>
+                    </p>
+                    <p><strong>Routenummer:</strong> @opdracht.Routenummer</p>
+                    <p><strong>Lader:</strong> @opdracht.Lader!.Naam </p>
+
+                    @if (opdracht.Laadbonnen != null && opdracht.Laadbonnen.Any())
+                    {
+                        <p><strong>Transporteur:</strong> @opdracht.Laadbonnen.First().Transporteur</p>
+                    }
+
+                    <p><strong>Nummerplaat:</strong> @opdracht.Nummerplaat</p>
+                    <figure class="image is-4by3">
+                        <img src="@opdracht.Fotourl" alt="Foto van de opdracht">
+                    </figure>
                 </div>
             </div>
-        }
-    </div>
-</section>
+
+            @if (opdracht.Laadbonnen != null && opdracht.Laadbonnen.Any())
+            {
+                <div class="column is-half">
+                    <div class="box">
+                        <h2 class="title is-4">Laadbonnen</h2>
+                        <ul>
+                            @foreach (var laadbon in opdracht.Laadbonnen)
+                            {
+                                <li><a href="@laadbon.Url">@laadbon.Nummer</a></li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h2 class="title is-4">Producten</h2>
+                        <ul>
+                            @foreach (var laadbon in opdracht.Laadbonnen)
+                            {
+                                @foreach (var product in laadbon.Producten!)
+                                {
+                                    <li>@product.ProductNaam</li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="column is-half">
+                    <div class="box">
+                        <h2 class="title is-4">Geen Laadbonnen Beschikbaar</h2>
+                    </div>
+                </div>
+            }
+        </div> 
+        <AuthorizeView Roles="@Roles.Lader">
+            <div class="container">
+                <a class="button is-primary" href="/transportopdracht/laadbon/@Id">Voeg laadbon toe.</a>
+                <a class="button is-warning" href="/transportopdracht/edit/@Id">Pas Aan</a>
+            </div>
+        </AuthorizeView>
+        
+    </section>
 }

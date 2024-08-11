@@ -32,12 +32,11 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
          .Where(x => x.Naam == model.Lader)
          .FirstOrDefaultAsync();
 
-        // If not found, create a new Gebruiker
         if (g == null)
         {
             g = new Gebruiker(model.Lader);
-            dBContext.Gebruikers.Add(g);  // Make sure to add the new Gebruiker to the context
-            await dBContext.SaveChangesAsync();  // Save changes to persist the new Gebruiker
+            dBContext.Gebruikers.Add(g);  
+            await dBContext.SaveChangesAsync(); 
         }
 
         Image image = new Image(storageService.BasePath, model.ImageContentType!);
@@ -66,7 +65,8 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
             Id = x.Id,
             Datum = x.Datum,
             Routenummer = x.Routenummer,
-            Laadbonnen = x.Laadbonnen.Select(e => new LaadbonDto.Detail
+            Laadbonnen = x.Laadbonnen != null
+            ? x.Laadbonnen.Select(e => new LaadbonDto.Detail
             {
                 Nummer = e.Nummer,
                 Url = e.Bestandurl,
@@ -83,7 +83,8 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
                 {
                     ProductNaam = a.ProductNaam,
                 })
-            }),
+            }).ToList()
+            : new List<LaadbonDto.Detail>(),
             Lader = new GebruikerDto.Index
             {
                 Naam = x.Lader.Naam
@@ -105,14 +106,12 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
     {
         var query = dBContext.TransportOpdrachten.AsQueryable();
 
-        if(!string.IsNullOrWhiteSpace(request.Searchterm))
-        {
-            query = query.Where(x => x.Routenummer.ToString() == request.Searchterm);
-        }
+        
 
         if(!string.IsNullOrWhiteSpace(request.Searchterm))
         {
-            query = query.Where(x => x.Lader.Naam == request.Searchterm);
+            query = query.Where(x => x.Lader.Naam.ToLower().Contains(request.Searchterm.ToLower())
+            || x.Routenummer.ToString().Contains(request.Searchterm));
         }
         
 
@@ -155,10 +154,20 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
         if (opdracht is null)
             throw new EntityNotFoundException(nameof(TransportOpdracht), transportOpdrachtId);
 
-        Gebruiker lader = new(model.Lader!);
+        Gebruiker g = await dBContext.Gebruikers
+       .Where(x => x.Naam == model.Lader)
+       .FirstOrDefaultAsync();
+
+        if (g == null)
+        {
+            g = new Gebruiker(model.Lader);
+            dBContext.Gebruikers.Add(g);
+            await dBContext.SaveChangesAsync();
+        }
+       
         opdracht.Datum = model.Datum!.Value;
         opdracht.Routenummer = model.Routenummer!.Value;
-        opdracht.Lader = lader;
+        opdracht.Lader = g;
         opdracht.Nummerplaat = model.Nummerplaat!;
 
         await dBContext.SaveChangesAsync();

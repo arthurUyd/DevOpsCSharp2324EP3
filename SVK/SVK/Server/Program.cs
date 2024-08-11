@@ -1,14 +1,14 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer; 
 
 using Microsoft.EntityFrameworkCore;
 using SVK.Server.Middleware;
 using SVK.Services;
 using SVK.Persistence;
-using SVK.Shared.Producten;
+
+using SVK.Shared.TransportOpdrachten;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddServices();
 // Fluentvalidation
-builder.Services.AddValidatorsFromAssemblyContaining<ProductDto.Mutate.Validator>();
+builder.Services.AddValidatorsFromAssemblyContaining<TransportOpdrachtDto.Mutate.Validator>();
 builder.Services.AddFluentValidationAutoValidation();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -85,7 +85,7 @@ app.MapFallbackToFile("index.html");
 using (var scope = app.Services.CreateScope())
 { // Require a DbContext from the service provider and seed the database.
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDBContext>();
- 
-
+  /*  Seeder s = new Seeder(dbContext);
+    s.Seed();*/
 }
 app.Run();

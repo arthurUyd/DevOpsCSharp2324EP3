@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <None Include="Shared\MainLayout.razor" />
-    <None Include="Shared\NavMenu.razor" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +19,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.32" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
-  </ItemGroup>
+  </ItemGroup><
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\SVK.Shared.csproj" />

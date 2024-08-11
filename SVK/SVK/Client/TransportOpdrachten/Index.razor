@@ -1,11 +1,26 @@
 ﻿@page "/transportopdrachten"
+@using SVK.Shared.Authentication
 <PageTitle>TransportOpdrachten</PageTitle>
+@attribute [Authorize(Roles = "Lader, Management")]
 
 <div class="container">
     <h1 class="title">Transport Opdrachten:</h1>
-    <AuthorizeView Roles ="Lader">
-        <a href="transportopdracht/create" class="button is-light is-danger mb-3 has-text-black">Toevoegen</a>
-    </AuthorizeView>
+    <div class="container">
+        <AuthorizeView Roles="@Roles.Lader">
+            <a href="transportopdracht/create" class="button is-light is-danger mb-3 has-text-black">Toevoegen</a>
+        </AuthorizeView>
+        <div class="columns">
+            <div class="column">
+                <div class="control has-icons-left is-expanded">
+                    <input class="input" type="search" placeholder="Zoeken..." value="@searchTerm" @onchange="SearchTermChanged">
+                    <span class="icon is-left">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     @if(opdrachten is null)
     {
         <p>Loading...</p>

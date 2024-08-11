@@ -1,11 +1,12 @@
 ﻿@page "/transportopdracht/laadbon/{transportopdrachtId:int}"
 <PageTitle>Laadbon Toevoegen</PageTitle>
+@attribute [Authorize(Roles = Roles.Lader)]
 
 
 <EditForm Model="@laadbon" OnValidSubmit="@CreateLaadbonAsync">
     <FluentValidationValidator />
-    
-    <label class="label">Laadbon</label>
+
+  <h1 class="title">Laadbon Aanmaken</h1>
     <div class="field">
         <label class="label">Laadbon Nummer</label>
         <div class="control">
@@ -24,18 +25,71 @@
 
     <div class="field">
         <label class="label">Selecteer Producten</label>
-        @foreach (var product in producten)
-        {
-            <div class="control">
-                <label class="checkbox">
-                    <input type="checkbox" @onchange="(e) => ToggleProductSelection(e, product)" /> @product.ProductNaam
-                </label>
+
+        <div class="control">
+            <div class="dropdown @(isDropdownOpen ? "is-active" : "")">
+                <div class="dropdown-trigger">
+                    <button class="button" @onclick="ToggleDropdown" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Selecteer producten</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                        <div class="dropdown-item">
+                            <input type="text" @bind="searchText" class="input" placeholder="Zoek producten..." @oninput="UpdateFilter" />
+                        </div>
+                        <div style="max-height: 200px; overflow-y: auto;">
+                            @foreach (var product in filteredProducts)
+                            {
+                                <div class="dropdown-item">
+                                    <label class="checkbox">
+                                        <input type="checkbox" @onchange="(e) => ToggleProductSelection(e, product)"
+                                               checked="@selectedProducts.Contains(product)" /> @product.ProductNaam
+                                    </label>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
-        }
+        </div>
+
         <ValidationMessage For="() => laadbon.Producten" />
     </div>
 
-    
+
+    <div class="field">
+        <div class="file has-name is-boxed is-fullwidth">
+            <label class="file-label">
+                <InputFile class="file-input" OnChange="@LoadFile" accept="application/pdf" />
+                <span class="file-cta">
+                    <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                    </span>
+                    <span class="file-label has-text-centered">
+                        @if (file is not null)
+                        {
+                            <span>Wijzig bestand</span>
+                        }
+                        else
+                        {
+                            <span>Selecteer een bestand</span>
+                        }
+                    </span>
+                </span>
+                @if (file is not null)
+                {
+                    <span class="file-name">
+                        @file.Name
+                    </span>
+                }
+            </label>
+        </div>
+        <ValidationMessage For="() => laadbon.ImageContentType" />
+    </div>
 
     <hr />
 
@@ -81,7 +135,7 @@
     </div>
 
     <div class="buttons">
-        <button class="button is-link is-fullwidth" type="submit">Toevoegen</button>
+        <button class="button is-primary is-fullwidth" type="submit">Toevoegen</button>
         <a href="transportopdracht/@transportOpdrachtId" class="button is-link is-light is-fullwidth">Annuleren</a>
     </div>
 </EditForm>

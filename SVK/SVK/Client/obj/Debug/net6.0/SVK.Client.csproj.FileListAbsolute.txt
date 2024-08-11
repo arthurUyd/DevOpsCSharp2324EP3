@@ -617,7 +617,6 @@ D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Client\obj
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Client\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SVK.Client.props
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Client\obj\Debug\net6.0\staticwebassets.pack.json
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Client\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Client\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Client\obj\Debug\net6.0\scopedcss\bundle\SVK.Client.styles.css
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Client\obj\Debug\net6.0\scopedcss\projectbundle\SVK.Client.bundle.scp.css
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Client\obj\Debug\net6.0\compressed\8bp3sb1yp9.gz

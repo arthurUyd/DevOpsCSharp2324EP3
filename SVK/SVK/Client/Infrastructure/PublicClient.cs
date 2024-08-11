@@ -1,4 +1,6 @@
-﻿namespace SVK.Client.Infrastructure
+﻿using System.Net.Http;
+
+namespace SVK.Client.Infrastructure
 {
     public class PublicClient
     {

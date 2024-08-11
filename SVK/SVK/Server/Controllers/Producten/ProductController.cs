@@ -22,18 +22,4 @@ public class ProductController : ControllerBase
         return await productService.GetIndexAsync(request);
     }
 
-    [SwaggerOperation("Haalt een product op aan de hand van zijn Id.")]
-    [HttpGet("{id}")]
-    public async Task<ProductDto.Detail> GetDetail(int id)
-    {
-        return await productService.GetDetailAsync(id);
-    }
-
-    [SwaggerOperation("Maakt een nieuw product aan.")]
-    [HttpPost]
-    public async Task<IActionResult> Create(ProductDto.Mutate model)
-    {
-        var productId = await productService.CreateAsync(model);  
-        return CreatedAtAction(nameof(Create), productId);
-    }
 }

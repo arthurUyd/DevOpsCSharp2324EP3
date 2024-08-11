@@ -1,4 +1,6 @@
 ﻿@page "/gebruikers"
+@attribute [Authorize(Roles = "Lader, Management")]
+<PageTitle>Gebruikers</PageTitle>
 
 <section class="section">
     <h1 class="title">Gebruikers:</h1>
@@ -8,14 +10,16 @@
             @foreach (var gebruiker in gebruikers)
             {
                     <div class="cell">
-                       @gebruiker.Naam
+                        <a class="link" href="transportopdrachten?searchTerm=@gebruiker.Naam">
+                            @gebruiker.Naam
+                        </a>
                     </div>
             }
         } 
         else
         {
             <div class="block">
-                Geen gebruikers om te tonen...
+                Loading...
             </div>
         }
     </div>

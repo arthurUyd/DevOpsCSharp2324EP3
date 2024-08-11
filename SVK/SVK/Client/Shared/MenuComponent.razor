@@ -1,11 +1,11 @@
-﻿<nav class="navbar" role="navigation" aria-label="main navigation">
+﻿
+<nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item mx-6 logo" href="/">
-            <img src="@Logo"/>
+            <img src="@Logo" />
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -14,17 +14,17 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item " href="/">
+            <a class="navbar-item" href="/">
                 Home
             </a>
 
             <a class="navbar-item" href="gebruikers">
                 Gebruikers
             </a>
+
             <a class="navbar-item" href="transportopdrachten">
                 TransportOpdrachten
             </a>
-           
         </div>
 
         <div class="navbar-end">
@@ -36,8 +36,18 @@
         </div>
     </div>
 </nav>
-@code
-{
+
+@code {
+    [Inject] private IJSRuntime JSRuntime { get; set; }
     private string Logo = "img/logo.png";
-  
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("initializeNavbarBurger");
+        }
+    }
+
+    
 }

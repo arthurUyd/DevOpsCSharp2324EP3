@@ -1,5 +1,7 @@
 ﻿@page "/transportopdracht/create"
-@attribute [Authorize(Roles = "Admin")]
+@attribute [Authorize(Roles = Roles.Lader)]
+<PageTitle>Transport Opdracht Aanmaken</PageTitle>
+
 <EditForm Model="@opdracht" OnValidSubmit="@CreateOpdrachtAsync">
     <FluentValidationValidator/>
 

@@ -54,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = VHJhbnNwb3J0T3BkcmFjaHRlblxEZXRhaWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/SVK/Client/TransportOpdrachten/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = VHJhbnNwb3J0T3BkcmFjaHRlblxFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/SVK/Client/TransportOpdrachten/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = VHJhbnNwb3J0T3BkcmFjaHRlblxJbmRleC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -77,7 +81,3 @@ build_metadata.AdditionalFiles.CssScope = b-257hek6lcx
 [D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/SVK/Client/Shared/MenuComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1lbnVDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-6q1yhpum5m
-
-[D:/Users/arthu/Documents/school/Y3/DevOps/DevOpsCSharp2324EP3/SVK/SVK/Client/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-xqbrrsifrg

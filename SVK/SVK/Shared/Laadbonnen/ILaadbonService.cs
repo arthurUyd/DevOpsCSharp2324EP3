@@ -8,7 +8,6 @@ namespace SVK.Shared.Laadbonnen;
 
 public interface ILaadbonService
 {
-    Task<int> CreateAsync(int id,LaadbonDto.Mutate model);
-    Task<LaadbonDto.Detail> GetDetailAsync(int id);
-    Task<LaadbonResult.Index> GetIndexAsync(LaadbonRequest.Index request);
+    Task<LaadbonResult.Create> CreateAsync(int id,LaadbonDto.Mutate model);
+  
 }

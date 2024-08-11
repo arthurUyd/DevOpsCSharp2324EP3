@@ -8,9 +8,12 @@ namespace SVK.Shared.Laadbonnen;
 
 public abstract class LaadbonResult
 {
-    public class Index
+ 
+
+    public class Create
     {
-        public IEnumerable<LaadbonDto.Index>? Laadbonnen { get; set; }
-        public int TotalAmount { get; set; }
+        public int LaadbonId {  get; set; }
+        public string UploadUri { get; set; } = default!;
+     
     }
 }

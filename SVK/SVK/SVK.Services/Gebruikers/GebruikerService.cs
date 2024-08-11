@@ -12,7 +12,7 @@ public class GebruikerService : IGebruikerService
     {
         this.dbContext = dbContext;
     }
-
+/*
     public async Task<int> CreateAsync(GebruikerDto.Mutate model)
     {
         Gebruiker g = new(model.Naam!); 
@@ -34,7 +34,7 @@ public class GebruikerService : IGebruikerService
         if(gebruiker is null  ) 
             throw new EntityNotFoundException(nameof(gebruiker), id);
         return gebruiker;
-    }
+    }*/
 
     public async Task<GebruikerResult.Index> GetIndexAsync(GebruikerRequest.Index request)
     {

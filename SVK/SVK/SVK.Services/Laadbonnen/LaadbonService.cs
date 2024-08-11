@@ -6,17 +6,22 @@ using SVK.Shared.Laadbonnen;
 using SVK.Shared.Producten;
 using SVK.Domain.Exceptions;
 using SVK.Domain.TransportOpdrachten;
+using SVK.Services.Files;
+using SVK.Domain.Files;
 
 namespace SVK.Services.Laadbonnen;
 internal class LaadbonService : ILaadbonService
 {
+    private readonly IStorageService storageService;
+
     private readonly ApplicationDBContext dbContext;
-    public LaadbonService(ApplicationDBContext dbContext)
+    public LaadbonService(ApplicationDBContext dbContext, IStorageService storageService)
     {
         this.dbContext = dbContext;
+        this.storageService = storageService;
     }
 
-    public async Task<int> CreateAsync(int transportopdrachtid, LaadbonDto.Mutate model)
+    public async Task<LaadbonResult.Create> CreateAsync(int transportopdrachtid, LaadbonDto.Mutate model)
     {
         
         TransportOpdracht? t = await dbContext.TransportOpdrachten.SingleOrDefaultAsync(x => x.Id == transportopdrachtid);
@@ -27,20 +32,32 @@ internal class LaadbonService : ILaadbonService
         if (await dbContext.Laadbonnen.AnyAsync(x => x.Nummer == model.Nummer))
             throw new EntityAlreadyExistsException(nameof(Laadbon), nameof(Laadbon.Nummer), model.Nummer.ToString());
         Address address = new(model.Address.Addressline1!, model.Address.Addressline2, model.Address.PostalCode!, model.Address.City!, model.Address.Country!);
-        Laadbon l = new(model.Nummer!.Value!, model.Bestandurl!, address, model.Producten!.Select(x => new Product()
+        List<Product> p = new();
+        foreach(ProductDto.Index s in model.Producten!)
         {
-            ProductNaam = x.ProductNaam!
-        }), model.Transporteur!);
+            p.Add(dbContext.Producten.FirstOrDefault(x => x.ProductNaam == s.ProductNaam));
+        }
+        Image file = new Image(storageService.BasePath, model.ImageContentType!);
+
+        Laadbon l = new(model.Nummer!.Value!, file.FileUri.ToString(), address, p, model.Transporteur!);
 
         t.Laadbon(l);
 
         dbContext.Laadbonnen.Add(l);
         await dbContext.SaveChangesAsync();
 
-        return l.Id;
+        Uri uploadSas = storageService.GenerateImageUploadSas(file);
+
+        LaadbonResult.Create result = new()
+        {
+            LaadbonId = l.Id,
+            UploadUri = uploadSas.ToString()
+        };
+
+        return result;
     }
 
-    public async Task<LaadbonDto.Detail> GetDetailAsync(int laadbonnnummer)
+   /* public async Task<LaadbonDto.Detail> GetDetailAsync(int laadbonnnummer)
     {
         LaadbonDto.Detail? detail = await dbContext.Laadbonnen.Select(x => new LaadbonDto.Detail
         {
@@ -51,9 +68,9 @@ internal class LaadbonService : ILaadbonService
         if(detail is null)
             throw new EntityNotFoundException(nameof(Laadbon), laadbonnnummer);
         return detail;
-    }
+    }*/
 
-    public async Task<LaadbonResult.Index> GetIndexAsync(LaadbonRequest.Index request)
+  /*  public async Task<LaadbonResult.Index> GetIndexAsync(LaadbonRequest.Index request)
     {
         var query = dbContext.Laadbonnen.AsQueryable();
 
@@ -75,6 +92,6 @@ internal class LaadbonService : ILaadbonService
             TotalAmount = totalAmount
         };
         return result;
-    }
+    }*/
 }
 

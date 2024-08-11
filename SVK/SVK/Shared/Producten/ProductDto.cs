@@ -15,25 +15,5 @@ public abstract class ProductDto
         public string? ProductNaam { get; set; }
     }
 
-    public class Detail
-    {
-        public int Id { get; set; }
-        public string? ProductNaam { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-    }
-
-    public class Mutate
-    {
-        public string? ProductNaam { get; set; }
-
-        public class Validator : AbstractValidator<Mutate>
-        {
-            public Validator()
-            {
-                RuleFor(x => x.ProductNaam).NotEmpty().MaximumLength(100);
-                
-            }
-        }
-    }
+  
 }

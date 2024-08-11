@@ -14,17 +14,6 @@ public class GebruikerService : IGebruikerService
     {
         this.client = client;
     }
-    public Task<int> CreateAsync(GebruikerDto.Mutate model)
-    {
-        throw new NotImplementedException();
-    }
-
-    public async Task<GebruikerDto.Detail> GetDetailAsync(int id)
-    {
-        var response = await client.GetFromJsonAsync<GebruikerDto.Detail>($"{endpoint}/{id}");
-        return response; 
-    }
-
     public async Task<GebruikerResult.Index> GetIndexAsync(GebruikerRequest.Index request)
     {
         if (request == null)
