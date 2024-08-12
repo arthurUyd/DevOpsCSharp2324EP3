@@ -832,6 +832,20 @@
         "runtime": {
           "bin/placeholder/SVK.Domain.dll": {}
         }
+      },
+      "SVK.Fakers/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Bogus": "35.6.0",
+          "SVK.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SVK.Fakers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SVK.Fakers.dll": {}
+        }
       }
     }
   },
@@ -2101,14 +2115,19 @@
       "type": "project",
       "path": "../Domain/SVK.Domain.csproj",
       "msbuildProject": "../Domain/SVK.Domain.csproj"
+    },
+    "SVK.Fakers/1.0.0": {
+      "type": "project",
+      "path": "../SVK.Fakers/SVK.Fakers.csproj",
+      "msbuildProject": "../SVK.Fakers/SVK.Fakers.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Bogus >= 35.6.0",
       "EntityFrameworkCore.Triggered >= 3.2.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.11",
-      "SVK.Domain >= 1.0.0"
+      "SVK.Domain >= 1.0.0",
+      "SVK.Fakers >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2140,6 +2159,9 @@
           "projectReferences": {
             "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj": {
               "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\Domain\\SVK.Domain.csproj"
+            },
+            "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\SVK.Fakers\\SVK.Fakers.csproj": {
+              "projectPath": "D:\\Users\\arthu\\Documents\\school\\Y3\\DevOps\\DevOpsCSharp2324EP3\\SVK\\SVK\\SVK.Fakers\\SVK.Fakers.csproj"
             }
           }
         }
@@ -2154,10 +2176,6 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Bogus": {
-            "target": "Package",
-            "version": "[35.6.0, )"
-          },
           "EntityFrameworkCore.Triggered": {
             "target": "Package",
             "version": "[3.2.2, )"

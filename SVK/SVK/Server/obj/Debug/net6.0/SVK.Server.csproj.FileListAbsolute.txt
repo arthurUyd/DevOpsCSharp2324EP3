@@ -116,3 +116,5 @@ D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Server\bin
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Server\bin\Debug\net6.0\System.IO.Pipelines.dll
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Server\bin\Debug\net6.0\SVK.Client.dll
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Server\bin\Debug\net6.0\SVK.Client.pdb
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Server\bin\Debug\net6.0\SVK.Fakers.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Server\bin\Debug\net6.0\SVK.Fakers.pdb

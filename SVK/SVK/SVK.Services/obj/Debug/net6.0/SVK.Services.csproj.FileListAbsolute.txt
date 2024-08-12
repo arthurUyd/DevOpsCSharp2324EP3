@@ -18,3 +18,5 @@ D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\SVK.Servic
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\SVK.Services\obj\Debug\net6.0\refint\SVK.Services.dll
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\SVK.Services\obj\Debug\net6.0\SVK.Services.pdb
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\SVK.Services\obj\Debug\net6.0\ref\SVK.Services.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\SVK.Services\bin\Debug\net6.0\SVK.Fakers.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\SVK.Services\bin\Debug\net6.0\SVK.Fakers.pdb

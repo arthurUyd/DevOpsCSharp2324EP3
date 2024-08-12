@@ -32,7 +32,7 @@ public class Seeder
     private void SeedProducts()
     {
 
-        var products = new ProductFaker().AsTransient().UseSeed(1233).Generate(50);
+        var products = new ProductFaker().AsTransient().UseSeed(3215).Generate(50);
         dbContext.Producten.AddRange(products);
         dbContext.SaveChanges();
     }

@@ -8,10 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "SVK.Persistence/1.0.0": {
         "dependencies": {
-          "Bogus": "35.6.0",
           "EntityFrameworkCore.Triggered": "3.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.11",
-          "SVK.Domain": "1.0.0"
+          "SVK.Domain": "1.0.0",
+          "SVK.Fakers": "1.0.0"
         },
         "runtime": {
           "SVK.Persistence.dll": {}
@@ -522,6 +522,15 @@
         "runtime": {
           "SVK.Domain.dll": {}
         }
+      },
+      "SVK.Fakers/1.0.0": {
+        "dependencies": {
+          "Bogus": "35.6.0",
+          "SVK.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SVK.Fakers.dll": {}
+        }
       }
     }
   },
@@ -854,6 +863,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "SVK.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SVK.Fakers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

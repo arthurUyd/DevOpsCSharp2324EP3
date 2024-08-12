@@ -17,7 +17,7 @@ public class Laadbon : Entity
     public int Nummer
     {
         get => nummer;
-        set => nummer = Guard.Against.Null(value, nameof(Nummer));
+        set => nummer = Guard.Against.NegativeOrZero(value, nameof(Nummer));
     }
     private string bestandurl = default!;
     public string Bestandurl
@@ -57,11 +57,11 @@ public class Laadbon : Entity
 
         this.producten.AddRange(producten);
     }
-    public Laadbon(int nummer, string bestandurl, Address adres, string transporteur)
+   /* public Laadbon(int nummer, string bestandurl, Address adres, string transporteur)
     {
         Nummer = nummer;
         Bestandurl = bestandurl;
         Address = adres;
         Transporteur = transporteur;
-    }
+    }*/
 }

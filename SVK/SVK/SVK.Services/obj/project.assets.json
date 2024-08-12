@@ -1008,14 +1008,28 @@
           "bin/placeholder/SVK.Domain.dll": {}
         }
       },
-      "SVK.Persistence/1.0.0": {
+      "SVK.Fakers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Bogus": "35.6.0",
+          "SVK.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SVK.Fakers.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SVK.Fakers.dll": {}
+        }
+      },
+      "SVK.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
           "EntityFrameworkCore.Triggered": "3.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.11",
-          "SVK.Domain": "1.0.0"
+          "SVK.Domain": "1.0.0",
+          "SVK.Fakers": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SVK.Persistence.dll": {}
@@ -2605,6 +2619,11 @@
       "type": "project",
       "path": "../Domain/SVK.Domain.csproj",
       "msbuildProject": "../Domain/SVK.Domain.csproj"
+    },
+    "SVK.Fakers/1.0.0": {
+      "type": "project",
+      "path": "../SVK.Fakers/SVK.Fakers.csproj",
+      "msbuildProject": "../SVK.Fakers/SVK.Fakers.csproj"
     },
     "SVK.Persistence/1.0.0": {
       "type": "project",

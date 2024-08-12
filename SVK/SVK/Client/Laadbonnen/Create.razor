@@ -6,11 +6,11 @@
 <EditForm Model="@laadbon" OnValidSubmit="@CreateLaadbonAsync">
     <FluentValidationValidator />
 
-  <h1 class="title">Laadbon Aanmaken</h1>
+  <h1 class="title" data-test-id="create">Laadbon Aanmaken</h1>
     <div class="field">
         <label class="label">Laadbon Nummer</label>
         <div class="control">
-            <InputNumber class="input" @bind-Value="laadbon.Nummer" />
+            <InputNumber class="input" data-test-id="nummer" @bind-Value="laadbon.Nummer" />
             <ValidationMessage For="() => laadbon.Nummer" />
         </div>
     </div>
@@ -18,7 +18,7 @@
     <div class="field">
         <label class="label">Lader</label>
         <div class="control">
-            <InputText class="input" @bind-Value="laadbon.Transporteur" />
+            <InputText class="input" data-test-id="transporteur" @bind-Value="laadbon.Transporteur" />
             <ValidationMessage For="() => laadbon.Transporteur" />
         </div>
     </div>
@@ -29,7 +29,7 @@
         <div class="control">
             <div class="dropdown @(isDropdownOpen ? "is-active" : "")">
                 <div class="dropdown-trigger">
-                    <button class="button" @onclick="ToggleDropdown" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <button class="button" data-test-id="productknop" @onclick="ToggleDropdown" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span>Selecteer producten</span>
                         <span class="icon is-small">
                             <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -97,7 +97,7 @@
     <div class="field">
         <label class="label">Straat</label>
         <div class="control">
-            <InputText class="input" @bind-Value="laadbon.Address.Addressline1" />
+            <InputText class="input" data-test-id="al1" @bind-Value="laadbon.Address.Addressline1" />
             <ValidationMessage For="() => laadbon.Address.Addressline1" />
         </div>
     </div>
@@ -105,7 +105,7 @@
     <div class="field">
         <label class="label">Bus</label>
         <div class="control">
-            <InputText class="input" @bind-Value="laadbon.Address.Addressline2" />
+            <InputText class="input" data-test-id="al2" @bind-Value="laadbon.Address.Addressline2" />
             <ValidationMessage For="() => laadbon.Address.Addressline2" />
         </div>
     </div>
@@ -113,7 +113,7 @@
     <div class="field">
         <label class="label">Postcode</label>
         <div class="control">
-            <InputText class="input" @bind-Value="laadbon.Address.PostalCode" />
+            <InputText class="input" data-test-id="postcode"  @bind-Value="laadbon.Address.PostalCode" />
             <ValidationMessage For="() => laadbon.Address.PostalCode" />
         </div>
     </div>
@@ -121,7 +121,7 @@
     <div class="field">
         <label class="label">Stad</label>
         <div class="control">
-            <InputText class="input" @bind-Value="laadbon.Address.City" />
+            <InputText class="input" data-test-id="city" @bind-Value="laadbon.Address.City" />
             <ValidationMessage For="() => laadbon.Address.City" />
         </div>
     </div>
@@ -129,7 +129,7 @@
     <div class="field">
         <label class="label">Land</label>
         <div class="control">
-            <InputText class="input" @bind-Value="laadbon.Address.Country" />
+            <InputText class="input" data-test-id="country" @bind-Value="laadbon.Address.Country" />
             <ValidationMessage For="() => laadbon.Address.Country" />
         </div>
     </div>

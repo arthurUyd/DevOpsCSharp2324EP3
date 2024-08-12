@@ -1,0 +1,104 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SVK.Fakers/1.0.0": {
+        "dependencies": {
+          "Bogus": "35.6.0",
+          "SVK.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SVK.Fakers.dll": {}
+        }
+      },
+      "Ardalis.GuardClauses/3.3.0": {
+        "dependencies": {
+          "JetBrains.Annotations": "2021.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ardalis.GuardClauses.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
+      "Bogus/35.6.0": {
+        "runtime": {
+          "lib/net6.0/Bogus.dll": {
+            "assemblyVersion": "35.6.0.0",
+            "fileVersion": "35.6.0.0"
+          }
+        }
+      },
+      "JetBrains.Annotations/2021.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "assemblyVersion": "2021.2.0.0",
+            "fileVersion": "2021.2.0.0"
+          }
+        }
+      },
+      "MimeTypesMap/1.0.8": {
+        "runtime": {
+          "lib/netstandard2.0/MimeTypesMap.dll": {
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
+          }
+        }
+      },
+      "SVK.Domain/1.0.0": {
+        "dependencies": {
+          "Ardalis.GuardClauses": "3.3.0",
+          "MimeTypesMap": "1.0.8"
+        },
+        "runtime": {
+          "SVK.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SVK.Fakers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ardalis.GuardClauses/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F/Qa2SLvRMWaVVT2pNFLeMoiGROUnwpMvnREG4KN3MxPsLrTIUi42/PCFXZ5H0N6wXCTAxzd8/gWNgcvoB9eNg==",
+      "path": "ardalis.guardclauses/3.3.0",
+      "hashPath": "ardalis.guardclauses.3.3.0.nupkg.sha512"
+    },
+    "Bogus/35.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WiK99a8LedzzG7QbnJ1OZT02WZHjr8V6L+cmGJbuga7TtI+Whd+KFWNmVPtXKACFNjz2c/FIR6QDNJsHD6Eazg==",
+      "path": "bogus/35.6.0",
+      "hashPath": "bogus.35.6.0.nupkg.sha512"
+    },
+    "JetBrains.Annotations/2021.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kKSyoVfndMriKHLfYGmr0uzQuI4jcc3TKGyww7buJFCYeHb/X0kodYBPL7n9454q7v6ASiRmDgpPGaDGerg/Hg==",
+      "path": "jetbrains.annotations/2021.2.0",
+      "hashPath": "jetbrains.annotations.2021.2.0.nupkg.sha512"
+    },
+    "MimeTypesMap/1.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iOm6Zar+yVROhlyrGGSJTfThvNoHLUeYeQQND9YD/ot/nA2qsWUp9kP2MHTdF9P7I8afW6eCf8vdELLZjDFdSQ==",
+      "path": "mimetypesmap/1.0.8",
+      "hashPath": "mimetypesmap.1.0.8.nupkg.sha512"
+    },
+    "SVK.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

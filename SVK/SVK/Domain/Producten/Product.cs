@@ -19,4 +19,11 @@ public class Product : Entity
     }
 
     public List<Laadbon> Laadbonnen { get; set; } = new();
+
+    private Product() { }
+
+    public Product(string productnaam)
+    {
+        this.ProductNaam = productnaam;
+    }
 }

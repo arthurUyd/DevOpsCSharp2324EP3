@@ -923,12 +923,21 @@
           "SVK.Domain.dll": {}
         }
       },
-      "SVK.Persistence/1.0.0": {
+      "SVK.Fakers/1.0.0": {
         "dependencies": {
           "Bogus": "35.6.0",
+          "SVK.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SVK.Fakers.dll": {}
+        }
+      },
+      "SVK.Persistence/1.0.0": {
+        "dependencies": {
           "EntityFrameworkCore.Triggered": "3.2.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.11",
-          "SVK.Domain": "1.0.0"
+          "SVK.Domain": "1.0.0",
+          "SVK.Fakers": "1.0.0"
         },
         "runtime": {
           "SVK.Persistence.dll": {}
@@ -1613,6 +1622,11 @@
       "sha512": ""
     },
     "SVK.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SVK.Fakers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

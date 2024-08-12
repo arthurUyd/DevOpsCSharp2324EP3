@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SVK",
+    "\\SVK\\Client"
   ],
-  "SelectedNode": "\\SVK.sln",
+  "SelectedNode": "\\SVK\\SVK.sln",
   "PreviewInSolutionExplorer": false
 }

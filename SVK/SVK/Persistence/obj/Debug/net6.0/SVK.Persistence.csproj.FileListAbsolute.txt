@@ -14,3 +14,5 @@ D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistenc
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\refint\SVK.Persistence.dll
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\SVK.Persistence.pdb
 D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\obj\Debug\net6.0\ref\SVK.Persistence.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\bin\Debug\net6.0\SVK.Fakers.dll
+D:\Users\arthu\Documents\school\Y3\DevOps\DevOpsCSharp2324EP3\SVK\SVK\Persistence\bin\Debug\net6.0\SVK.Fakers.pdb
