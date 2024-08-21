@@ -57,7 +57,28 @@ public class TransportOpdrachtenService : ITransportOpdrachtService
 
         return result;
     }
+    public async Task CreateAndroidAsync(TransportOpdrachtDto.Mutate model)
+    {
+        if (await dBContext.TransportOpdrachten.AnyAsync(x => x.Routenummer == model.Routenummer))
+            throw new EntityAlreadyExistsException(nameof(TransportOpdracht), nameof(TransportOpdracht.Routenummer), model.Routenummer.ToString());
 
+        Gebruiker g = await dBContext.Gebruikers
+         .Where(x => x.Naam == model.Lader)
+         .FirstOrDefaultAsync();
+
+        if (g == null)
+        {
+            g = new Gebruiker(model.Lader);
+            dBContext.Gebruikers.Add(g);
+            await dBContext.SaveChangesAsync();
+        }
+
+        TransportOpdracht t = new(model.Datum!.Value, model.Routenummer!.Value, g, model.ImageUrl!, model.Nummerplaat!);
+
+        dBContext.TransportOpdrachten.Add(t);
+        await dBContext.SaveChangesAsync();
+
+    }
     public async Task<TransportOpdrachtDto.Detail> GetDetailAsync(int id)
     {
         TransportOpdrachtDto.Detail? t = await dBContext.TransportOpdrachten.Select(x => new TransportOpdrachtDto.Detail

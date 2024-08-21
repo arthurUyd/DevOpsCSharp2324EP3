@@ -1,7 +1,7 @@
 {
   "entryAssembly": "SVK.Client",
   "resources": {
-    "hash": "sha256-52flOy/XnnosmsYgc74WflZlruJyUFWPBkmU/WMNeW4=",
+    "hash": "sha256-5uOAFILQ5TJ/Hqsa4i4uLcdDiWV7bEr6XR6WvEvoa8E=",
     "runtime": {
       "dotnet.6.0.25.mdyvpzxzhd.js": "sha256-1jUGCCSGH9JWhkqbHdQk8JBjBI8K/VC63En5zlypVps=",
       "dotnet.timezones.blat": "sha256-KsGUR9nqtXb3Hy6IrNlnc1HoSS+AFlsXTX9rq4oChtA=",
@@ -205,12 +205,12 @@
       "mscorlib.dll": "sha256-veli+XvWHzkA3s4t4DKI+XiyNMpfHQjiO002+ExANkU=",
       "netstandard.dll": "sha256-O9JhHo5KqxkmwmapuxuhG/iMRV7RHcrCDO9z+yv+8yI=",
       "System.Private.CoreLib.dll": "sha256-6rKu8tPdUGsvbSpesoNMVzbx7bNqPRMPV34eI7vSYaQ=",
-      "SVK.Shared.dll": "sha256-UCCD00tjO1x9Hs1GtV+kVg9j/JwujsEzpXiZDDrKYj4=",
-      "SVK.Client.dll": "sha256-Is/ky0zJtiJfBeyT8O7+Tz1k2t1U06XzmLZmdEZ9Ufo="
+      "SVK.Shared.dll": "sha256-EGPWvWdUgz98ndG1CYZPpYUCYxHdhXcJfXU9bMxjdoE=",
+      "SVK.Client.dll": "sha256-bnYRMH2HV05EiZOxNiVkSRfe/O4VdVoqqLW3LUQu3lI="
     },
     "pdb": {
-      "SVK.Shared.pdb": "sha256-IDe16VnVFmi5ok/fazIqJfawu+HJDUM4v3LBbt/J2mE=",
-      "SVK.Client.pdb": "sha256-5OSPduxWuG4ikbhw2b2ePphTohx6ln2xrV/IV3uTce4="
+      "SVK.Shared.pdb": "sha256-ia+F4Uo5VQJ0QyCIR02fM7PDmDl2Uky6i6XDu5fhRL0=",
+      "SVK.Client.pdb": "sha256-vLX1IRwVn/Si270zhXcXnNmsQfdhNHL7Jh4grlRqDj4="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

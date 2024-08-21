@@ -1,5 +1,5 @@
 ﻿@page "/transportopdracht/{Id:int}"
-@attribute [Authorize(Roles = Roles.Lader)]
+@attribute [Authorize]
 
 <PageTitle>@opdracht?.Routenummer</PageTitle>
     @if (opdracht is null)

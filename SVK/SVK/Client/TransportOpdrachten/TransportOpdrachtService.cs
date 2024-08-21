@@ -42,4 +42,9 @@ public class TransportOpdrachtService : ITransportOpdrachtService
         var response = await publicClient.Client.GetFromJsonAsync<TransportOpdrachtResult.Index>($"{endpoint}?{request.AsQueryString()}");
         return response!;
     }
+
+    public Task CreateAndroidAsync(TransportOpdrachtDto.Mutate model)
+    {
+        throw new NotImplementedException();
+    }
 }

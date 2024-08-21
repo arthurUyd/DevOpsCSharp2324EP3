@@ -45,6 +45,7 @@ public abstract class TransportOpdrachtDto
         public string? Lader { get; set; }
         public string? ImageContentType { get; set; }
         public string? Nummerplaat { get; set; }
+        public string? ImageUrl { get; set; }
        
         public class Validator  : AbstractValidator<Mutate>
         {

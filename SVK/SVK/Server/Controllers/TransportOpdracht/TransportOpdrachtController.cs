@@ -8,7 +8,6 @@ namespace SVK.Server.Controllers.TransportOpdracht;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize]
 public class TransportOpdrachtController : ControllerBase
 {
     private readonly ITransportOpdrachtService service; 
@@ -34,7 +33,7 @@ public class TransportOpdrachtController : ControllerBase
 
     [SwaggerOperation("Maakt een nieuwe transportopdracht aan.")]
     [HttpPost]
-    [Authorize(Roles ="Lader")]
+    [Authorize(Roles = Roles.Lader)]
     public async Task<IActionResult> Create(TransportOpdrachtDto.Mutate model)
     {
         var id = await service.CreateAsync(model);
@@ -47,6 +46,13 @@ public class TransportOpdrachtController : ControllerBase
     public async Task<IActionResult> Edit(int id, TransportOpdrachtDto.Mutate model)
     {
         await service.EditAsync(id, model);
+        return NoContent();
+    }
+    [SwaggerOperation("Maakt een nieuwe transportopdracht aan via android applicatie.")]
+    [HttpPost("android"), AllowAnonymous]
+    public async Task<IActionResult> CreateAndroid(TransportOpdrachtDto.Mutate model)
+    {
+        await service.CreateAndroidAsync(model);
         return NoContent();
     }
 }
